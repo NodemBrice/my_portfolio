@@ -1,0 +1,151 @@
+/* ===== RESET & POLICE ===== */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    line-height: 1.7;
+}
+
+/* ===== HERO avec image de fond ===== */
+
+   .hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+                url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1600&q=80') center/cover no-repeat fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    
+}
+
+.overlay { 
+    position: absolute; top:0; left:0; width:100%; height:100%; 
+    background: rgba(10,0,40,0.5); 
+}
+.hero-content {
+    z-index: 2;
+    max-width: 800px;
+    padding: 2rem;
+}
+.hero h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(0,255,255,0.8);
+}
+.hero p {
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+}
+.big { font-size: 2rem; color: #00ffff; }
+.btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+    background: #00ffff;
+    color: #000;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn:hover { transform: scale(1.1); box-shadow: 0 0 30px #00ffff; }
+
+/* ===== SECTIONS COMMUNES ===== */
+section {
+    padding: 80px 5%;
+    text-align: center;
+}
+h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #00ffff;
+}
+
+/* ===== À PROPOS ===== */
+.about { background: #0f0f1f; }
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.card {
+    background: rgba(0,255,255,0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid #00ffff;
+    transition: 0.4s;
+}
+.card:hover { transform: translateY(-15px); box-shadow: 0 0 30px rgba(0,255,255,0.4); }
+
+/* ===== PROJETS ===== */
+.projects { background: #111; }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.project {
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+.project img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.project:hover img { transform: scale(1.15); }
+.project h4 {
+    padding: 1rem;
+    background: #00ffff;
+    color: #000;
+    font-size: 1.3rem;
+}
+
+/* ===== CONTACT ===== */
+.contact { background: #0a0a1a; }
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+}
+input, textarea {
+    padding: 1rem;
+    border: 2px solid #00ffff;
+    background: rgba(0,255,255,0.1);
+    border-radius: 10px;
+    color: white;
+    font-family: inherit;
+}
+button {
+    padding: 1rem;
+    background: #00ffff;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover { background: white; }
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #000;
+    font-size: 0.9rem;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 3rem; }
+    .big { font-size: 1.5rem; }
+}
